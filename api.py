@@ -16,6 +16,5 @@ app = FastAPI()
 async def completions(payload: Payload):
     return CompletionResponse(choices=codegen(payload))
 
-
 if __name__ == "__main__":
     uvicorn.run("api:app", host="0.0.0.0", port=PORT)

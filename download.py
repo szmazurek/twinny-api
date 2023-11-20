@@ -5,7 +5,6 @@ from tqdm import tqdm
 
 config = yaml.safe_load(open("./config.yml"))
 
-
 def download_file(url, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     response = requests.get(url, stream=True)
@@ -48,4 +47,5 @@ def download_model(model_name):
 
 
 if __name__ == "__main__":
+    
     download_model(config["model_name"])
